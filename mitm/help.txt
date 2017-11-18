@@ -1,0 +1,18 @@
+mitm [-h] [-c command args]
+
+-h --help : Displays help message
+-c --command : Cancels interactive mode; Executes single command
+
+
+mitm commands:
+attack - Starts attack on target(s)
+	-t ip : Victim ip
+	-i interface : Interface to attack on
+	-s script : Execute script
+foward - Fowards at local port
+	-i interface = Interface to foward on
+	-s port = Source port
+	-d port = Destination port
+scan - Scans network
+exit - Exits script
+help - Displays help message
