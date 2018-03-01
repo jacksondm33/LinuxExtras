@@ -26,7 +26,7 @@ then
 case $2 in
 "exit") ex=1;;
 "attack") st_auto=1;;
-"foward") fw_auto=1;;
+"forward") fw_auto=1;;
 "scan") sc_auto=1;;
 "help") cat help.txt; exit 0;;
 
@@ -58,7 +58,7 @@ read input
 case $input in
 "exit") ex=1;;
 "attack") st=1;;
-"foward") fw=1;;
+"forward") fw=1;;
 "scan") sc=1;;
 "help") cat help.txt;;
 
@@ -95,7 +95,7 @@ fi
 # ----------Start: Initialize attack----------
 
 # ----------End: Initialize attack----------
-# ----------Start: Foward----------
+# ----------Start: Forward----------
 if [ $fw -eq 1 ]
 then
 echo -n "Interface: "
@@ -104,7 +104,7 @@ echo -n "Src Port: "
 read port_src
 echo -n "Dest Port: "
 read port_dest
-if ./fowardmitm.sh $interface $port_src $port_dest
+if ./forwardmitm.sh $interface $port_src $port_dest
 then
 echo -e "\e[32m[*] Port Routing Successful\e[39m"
 else
@@ -112,11 +112,11 @@ echo -e "\e[31m[-] Port Routing Failed\e[39m"
 fi
 fw=0
 fi
-# ----------End: Foward----------
-# ----------Start: Foward auto----------
+# ----------End: Forward----------
+# ----------Start: Forward auto----------
 if [ $fw_auto -eq 1 ]
 then
-if ./fowardmitm.sh $3 $4 $5
+if ./forwardmitm.sh $3 $4 $5
 then
 echo -e "\e[32m[*] Port Routing Successful\e[39m"
 else
@@ -124,7 +124,7 @@ echo -e "\e[31m[-] Port Routing Failed\e[39m"
 fi
 exit 0
 fi
-# ----------End: Foward auto----------
+# ----------End: Forward auto----------
 # ----------Start: Arp attack----------
 if [ $st -eq 1 ]
 then

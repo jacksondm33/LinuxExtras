@@ -9,8 +9,8 @@ attack - Starts attack on target(s)
 	-t ip : Victim ip
 	-i interface : Interface to attack on
 	-s script : Execute script
-foward - Fowards at local port
-	-i interface = Interface to foward on
+forward - Forwards at local port
+	-i interface = Interface to forward on
 	-s port = Source port
 	-d port = Destination port
 scan - Scans network
